@@ -1,0 +1,189 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #0b1d35;
+
+    background-image:
+        linear-gradient(rgba(0, 150, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 150, 255, 0.08) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+}
+
+header {
+    background: rgba(0, 20, 40, 0.9);
+    border-bottom: 2px solid #00aaff;
+    padding: 20px;
+}
+
+header p {
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 40px;
+    color: #f8f8ff;
+    text-shadow: 0 0 15px #080808;
+}
+
+.container {
+    width: 100%;
+    max-width: none;
+    margin: 40px 0;
+    padding: 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.card {
+    flex: 0 0 420px;
+    width: 420px;
+    min-width: 420px;
+
+    background: rgba(10, 30, 50, 0.9);
+    border-radius: 15px;
+    border: 1px solid #008cff;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.25);
+
+    padding: 0 0 25px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.section-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 25px;
+
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 5px 5px 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Setiap kategori berada di baris tersendiri */
+.scratch-section {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Judul kategori */
+.section-title {
+    color: #00c8ff;
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+
+.section-description {
+    color: #f8f8ff;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0 0 20px;
+}
+
+
+.card p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card h3 {
+    color: #00c8ff;
+    overflow-wrap: break-word;
+     margin: 20px 20px 20px;
+}
+
+.card p {
+    line-height: 1.8;
+    color: #f8f8ff;
+    font-size: 16px;
+    text-align: justify;
+    overflow-wrap: break-word;
+}
+h2 {
+    color: #00c8ff;
+    overflow-wrap: break-word;
+}
+
+p {
+    line-height: 1.8;
+    color: #f8f8ff;
+    font-size: 16px;
+    text-align: justify;
+    overflow-wrap: break-word;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .section-title {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        gap: 30px;
+    }
+
+    .section-cards {
+        gap: 18px;
+    }
+
+    .card {
+        flex: 0 0 420px;
+        width: 420px;
+        min-width: 420px;
+        padding-bottom: 20px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card h3,
+    .card p {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+footer {
+    margin-top: auto;
+    flex-shrink: 0;
+
+    width: 100%;
+    background: rgba(0, 20, 40, 0.9);
+    border-top: 2px solid #00aaff;
+    padding: 20px;
+    text-align: center;
+}
